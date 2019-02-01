@@ -1,0 +1,66 @@
+1548624066266	Delete elements
+1548624311261	Delete element
+1548624762595	Delete element
+1548629358796	Rename package 'com.falldetection.view'
+1548632514338	Move file
+1548632971553	Move file
+1548690525968	Move file
+1548694359614	Delete element
+1548695033764	Delete element
+1548696196413	Move 'css' to 'META-INF'
+1548696201864	Move 'css' to 'WebContent'
+1548696209694	Move 'js' to 'css'
+1548696214770	Move 'js' to 'WebContent'
+1548696220200	Move 'jsp' to 'WebContent'
+1548862679440	Delete element
+1548877413555	Delete element
+1548877428660	Copy compilation unit
+1548877434746	Delete element
+1548878131555	Rename type 'PatientRegistrationController'
+1548881510865	Delete element
+1548881653439	Rename resource 'login.html'
+1548881661304	Move 'login.jsp' to 'jsp'
+1548881679947	Delete element
+1548881684762	Delete element
+1548885357685	Rename type 'NewPatientRegistrationController'
+1548888151151	Rename resource 'jbr'
+1548889358312	Rename resource 'index.html'
+1548889372276	Rename resource 'index.jsp'
+1548891194501	Delete element
+1548894086301	Copy file
+1548894372474	Delete element
+1548894423240	Move 'patient-beans.xml' to 'WEB-INF'
+1548894808525	Delete element
+1548895026770	Rename resource 'user-beans.xml'
+1548895406882	Copy folder
+1548895413670	Delete element
+1548898240247	Copy file
+1548941830731	Move 'register.jsp' to 'WEB-INF'
+1548941837389	Move 'register.jsp' to 'WebContent'
+1548941842254	Move 'welcome.jsp' to 'WebContent'
+1548941849458	Move 'login.jsp' to 'WebContent'
+1548941855286	Delete element
+1548952029932	Copy files
+1548952045777	Copy folders
+1548952612215	Copy package
+1548952617899	Copy package
+1548952625597	Copy package
+1548952631020	Copy package
+1548954596238	Copy file
+1548955585271	Copy compilation units
+1548955649752	Copy compilation units
+1548955660444	Copy compilation units
+1548955668990	Copy compilation units
+1548957149430	Copy file
+1548957164385	Copy files
+1548957181520	Copy files
+1548971294791	Copy files
+1548971669526	Copy file
+1548971686543	Copy files
+1548972072245	Rename package 'com.falldetection.controller'
+1548972089182	Rename package 'com.falldetection.dao'
+1548972149870	Rename package 'com.frauas.dao'
+1548972168573	Rename package 'com.falldetection.model'
+1548972179666	Rename package 'com.falldetection.service'
+1548972191666	Rename package 'com.frauas.web.controller'
+1548972328525	Copy packages

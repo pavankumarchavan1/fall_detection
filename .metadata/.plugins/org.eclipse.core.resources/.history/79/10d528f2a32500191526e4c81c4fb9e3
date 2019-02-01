@@ -1,0 +1,40 @@
+package com.frauas.falldetection.dao;
+
+import com.falldetection.model.LoginInfo;
+import com.falldetection.model.PatientInfo;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class PatientDaoImpl implements PatientDao {
+
+	@Autowired
+	DataSource datasource;
+
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+
+	public void register(PatientInfo user) {
+		
+		String sql = "insert into falldetectordb values(?,?,?,?,?,?)";
+
+		jdbcTemplate.update(sql, new Object[] { user.getPatientName(), user.getPassword(), user.getDefaultAddress(), user.getEmergencyHospital(),
+				user.getEmergencyContact(), user.getPatientsId()
+		});
+
+	}
+
+	public PatientInfo validateUser(LoginInfo login) {
+		
+		String sql = "select * from patientInfo where patientname='" + login.getPatientName() + "' and password='" + login.getPassword()
+		+ "'";
+
+		List<PatientInfo> users = jdbcTemplate.query(sql, new PatientMapper());
+
+		return users.size() > 0 ? users.get(0) : null;
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.falldetection.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class LoginInfo {
+
+
+	private String patientName;
+	private String password;
+	
+	/*	private UUID patientsId;
+
+	public UUID getPatientsId() {
+		return patientsId;
+	}
+	public void setPatientsId(String patientsId) {
+		UUID uniqueKey = UUID.randomUUID();
+		this.patientsId = uniqueKey;
+	}*/
+	
+	public String getPatientName() {
+		return patientName;
+	}
+	public void setPatientName(String patientName) {
+		this.patientName = patientName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.falldetection.model;
+
+public class Snippet {
+	public static void main(String[] args) {
+		LoginInfo
+	}
+}
+

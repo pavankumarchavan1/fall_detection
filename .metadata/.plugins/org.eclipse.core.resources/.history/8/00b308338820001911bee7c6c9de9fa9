@@ -1,0 +1,8 @@
+package com.falldetection.main;
+
+public class FallDetectionApp {
+	
+	FalldetectionBO obj=new FalldetectionBO();
+	
+
+}

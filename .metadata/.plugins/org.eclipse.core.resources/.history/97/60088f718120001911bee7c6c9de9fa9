@@ -1,0 +1,27 @@
+package com.falldetection.main;
+
+public class User {
+	
+	private String name;
+	private String primary_mail;
+	private String  secondary_mail;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPrimary_mail() {
+		return primary_mail;
+	}
+	public void setPrimary_mail(String primary_mail) {
+		this.primary_mail = primary_mail;
+	}
+	public String getSecondary_mail() {
+		return secondary_mail;
+	}
+	public void setSecondary_mail(String secondary_mail) {
+		this.secondary_mail = secondary_mail;
+	}
+
+}

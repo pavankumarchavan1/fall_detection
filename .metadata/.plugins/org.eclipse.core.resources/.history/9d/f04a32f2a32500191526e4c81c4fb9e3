@@ -1,0 +1,27 @@
+package com.falldetection.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.falldetection.model.LoginInfo;
+import com.falldetection.model.PatientInfo;
+import com.frauas.falldetection.dao.PatientDao;
+
+public class PatientServiceImpl implements PatientService{
+	
+	
+	@Autowired
+	  public PatientDao patientdao;
+
+	public void register(PatientInfo user) {
+
+		patientdao.register(user);
+		
+	}
+
+	public PatientInfo validateUser(LoginInfo login) {
+
+		return patientdao.validateUser(login);
+		
+	}
+
+}

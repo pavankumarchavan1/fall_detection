@@ -1,0 +1,12 @@
+package com.falldetection.dao;
+
+import java.util.UUID;
+
+public class UniqueIDGenerator {
+
+	 public static UUID main(String[] args) {  
+		  UUID uniqueKey = UUID.randomUUID();   
+		  System.out.println (uniqueKey);
+		return uniqueKey;  
+		}
+}

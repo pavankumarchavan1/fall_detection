@@ -1,0 +1,87 @@
+package com.falldetection.main;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class FalldetectionBO {
+	
+	private String name;
+	private String e1;
+	private String e2;
+	
+	public void inputFromUser() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Welcome to fall detection");
+		System.out.println("Enter your Name");
+		name=sc.nextLine();
+		System.out.println("Enter EmailId of 1 st contact person");
+		e1=sc.nextLine();
+		System.out.println("Enter EmailId of 2 st contact person");
+		e2=sc.nextLine();
+		User u1= new User(name,e1,e2);
+		System.out.println("Are you walking alone");
+		String choice=sc.next();
+		if(choice.equalsIgnoreCase("yes")||choice.equalsIgnoreCase("y")) {
+			try {
+				calculation(u1);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else {
+			System.out.println("Thanks for using our service.Please comeback when you start walking alone.");
+		}
+	}
+	
+	public void calculation(User u) throws IOException {
+		ArrayList<DataSets> data=datafromcsv();
+		ArrayList<Double>values=new ArrayList<Double>();
+		for(DataSets d: data) {
+			int x=d.getX();
+			int y=d.getY();
+			int z=d.getZ();
+			
+			Double result=Math.sqrt(x*x+y*y+z*z);
+			System.out.println(result);
+		}
+		
+	}
+	
+    public ArrayList datafromcsv() throws IOException {
+    	BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\sahana\\Desktop\\sample fall detection\\SampleFallDetetion\\src\\com\\falldetection\\main\\dataSets.csv"));
+		String line = null;
+		Scanner sc = null;
+		int index = 0;
+		ArrayList<DataSets> data= new ArrayList<DataSets>();
+		while ((line = reader.readLine()) != null) {
+			DataSets d = new DataSets();
+			sc = new Scanner(line);
+			sc.useDelimiter(",");
+			while (sc.hasNext()) {
+				Integer value = sc.nextInt();
+				if (index == 0)
+					d.setX(value);
+				else if (index == 1)
+					d.setY(value);
+				else if (index == 2)
+					d.setZ(value);
+				else 
+					System.out.println("invalid data::" + data);
+				index++;
+			}
+			index = 0;
+			data.add(d);
+		}
+		
+		//close reader
+		reader.close();
+		
+		//System.out.println(data);
+		return data;
+    }
+
+}

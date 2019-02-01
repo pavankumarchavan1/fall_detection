@@ -1,0 +1,10 @@
+com\frauas\falldetection\dao\PatientMapper.class
+com\frauas\falldetection\service\PatientService.class
+com\frauas\falldetection\dao\PatientDaoImpl.class
+com\frauas\falldetection\web\controller\HelloController.class
+com\frauas\falldetection\dao\PatientDao.class
+com\frauas\falldetection\web\controller\PatientController.class
+com\frauas\falldetection\web\controller\RegistrationController.class
+com\frauas\falldetection\model\LoginInfo.class
+com\frauas\falldetection\service\PatientServiceImpl.class
+com\frauas\falldetection\model\PatientInfo.class

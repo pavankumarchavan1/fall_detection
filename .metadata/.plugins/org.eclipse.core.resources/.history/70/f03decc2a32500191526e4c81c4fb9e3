@@ -1,0 +1,25 @@
+package com.falldetection.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.falldetection.model.PatientInfo;
+
+public class PatientMapper implements RowMapper<PatientInfo> {
+
+	public PatientInfo mapRow(ResultSet resultset, int arg1) throws SQLException {
+		
+		PatientInfo patientInfo = new PatientInfo();
+	
+			patientInfo.setPatientName(resultset.getString("patientname"));
+		 	patientInfo.setPassword(resultset.getString("password"));
+		 	patientInfo.setDefaultAddress(resultset.getString("address"));
+		 	patientInfo.setEmergencyHospital(resultset.getInt("hospital"));
+		 	patientInfo.setEmergencyContact(resultset.getInt("contact"));
+		 	patientInfo.setPatientsId(resultset.getLong("id"));
+
+		return patientInfo;
+	}
+}

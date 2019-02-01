@@ -1,0 +1,13 @@
+package com.frauas.falldetection.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class LoginInfo {
+
+
+	private String patientName;
+	private String patientID;
+	
+
+}

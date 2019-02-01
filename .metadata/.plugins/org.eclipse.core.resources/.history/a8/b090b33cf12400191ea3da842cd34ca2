@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS myusers;
+USE myusers;
+
+DROP TABLE IF EXISTS `myusers`.`patientInfo`;
+CREATE TABLE `myusers`.`patientInfo` (
+  `patientname` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NOT NULL,
+  `hospital` VARCHAR(45) NULL,
+  `contact`INT NULL,
+  `id` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
